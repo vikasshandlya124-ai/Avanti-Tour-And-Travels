@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment | Avanti Tour & Travels</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+
+<div class="bg-circle circle1"></div>
+<div class="bg-circle circle2"></div>
+
+<div class="payment-container">
+
+    <!-- Logo -->
+
+    <img src="images/logo.jpg" class="logo" alt="Avanti Tour & Travels">
+
+    <!-- Heading -->
+
+    <h1>Secure Advance Payment</h1>
+
+    <p class="subtitle">
+        Thank you for choosing
+        <strong>Avanti Tour & Travels</strong>.
+        Please pay the booking advance securely using any UPI app.
+    </p>
+
+    <!-- QR CARD -->
+
+    <div class="payment-card">
+
+        <img src="images/upi-qr.png" class="qr-image" alt="UPI QR">
+
+        <h3>UPI ID</h3>
+
+        <div class="upi-box">
+
+            <input
+                type="text"
+                id="upi"
+                value="vikasshandlya124@okhdfcbank"
+                readonly>
+
+            <button onclick="copyUPI()">
+                <i class="fa-regular fa-copy"></i>
+            </button>
+
+        </div>
+
+        <a class="pay-btn"
+            href="upi://pay?pa=vikasshandlya124@okhdfcbank&pn=Avanti Tour and Travels&cu=INR">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            Pay Using Any UPI App
+
+        </a>
+
+    </div>
+
+    <!-- STEPS -->
+
+    <div class="steps">
+
+        <h2>How to Complete Payment</h2>
+
+        <div class="step">
+
+            <i class="fa-solid fa-qrcode"></i>
+
+            Scan the QR Code
+
+        </div>
+
+        <div class="step">
+
+            <i class="fa-solid fa-money-check-dollar"></i>
+
+            Pay the Booking Advance
+
+        </div>
+
+        <div class="step">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Send Payment Screenshot
+
+        </div>
+
+        <div class="step">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            Booking Confirmation
+
+        </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+
+    <div class="buttons">
+
+        <a
+            href="https://wa.me/918527439924?text=Hello%20Avanti%20Tour%20and%20Travels,%20I%20have%20completed%20my%20advance%20payment.%20Here%20is%20my%20payment%20screenshot."
+            class="whatsapp-btn">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Send Screenshot on WhatsApp
+
+        </a>
+
+        <a href="index.html" class="home-btn">
+
+            <i class="fa-solid fa-house"></i>
+
+            Back To Home
+
+        </a>
+
+    </div>
+
+    <!-- HELP -->
+
+    <div class="help">
+
+        <h3>Need Help?</h3>
+
+        <p>
+
+            <i class="fa-solid fa-phone"></i>
+
+            +91 8527439924
+
+        </p>
+
+        <p>
+
+            <i class="fa-solid fa-envelope"></i>
+
+            info@avantitourandtravels.com
+
+        </p>
+
+        <p>
+
+            <i class="fa-solid fa-clock"></i>
+
+            24×7 Customer Support
+
+        </p>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <i class="fa-solid fa-lock"></i>
+
+        100% Secure Payment
+
+    </div>
+
+</div>
+
+<script src="payment.js"></script>
+
+</body>
+
+</html>

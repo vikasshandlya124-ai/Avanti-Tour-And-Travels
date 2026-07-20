@@ -1,0 +1,482 @@
+/* ===========================
+   AVANTI TOUR & TRAVELS
+   PREMIUM PAYMENT PAGE
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#edf4ff,#f7fbff,#ffffff);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+    padding:50px 20px;
+
+}
+
+
+/* Background Circles */
+
+.bg-circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    z-index:0;
+
+}
+
+.circle1{
+
+    width:280px;
+
+    height:280px;
+
+    background:#ff8c29;
+
+    top:-80px;
+
+    left:-80px;
+
+    opacity:.18;
+
+}
+
+.circle2{
+
+    width:320px;
+
+    height:320px;
+
+    background:#0d2b52;
+
+    right:-100px;
+
+    bottom:-100px;
+
+    opacity:.15;
+
+}
+
+
+
+/* Main Container */
+
+.payment-container{
+
+    width:100%;
+
+    max-width:560px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+/* Logo */
+
+.logo{
+
+    width:180px;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+}
+
+
+
+/* Heading */
+
+h1{
+
+    text-align:center;
+
+    color:#0d2b52;
+
+    font-size:36px;
+
+    font-weight:700;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-top:12px;
+
+    margin-bottom:35px;
+
+    line-height:28px;
+
+}
+
+
+
+/* Card */
+
+.payment-card{
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:35px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.10);
+
+    text-align:center;
+
+}
+
+
+
+/* QR */
+
+.qr-image{
+
+    width:250px;
+
+    max-width:100%;
+
+    border-radius:18px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* UPI */
+
+.payment-card h3{
+
+    color:#0d2b52;
+
+    margin-bottom:12px;
+
+}
+
+.upi-box{
+
+    display:flex;
+
+    margin-bottom:25px;
+
+    border:2px solid #e9eef8;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+.upi-box input{
+
+    flex:1;
+
+    border:none;
+
+    padding:16px;
+
+    font-size:15px;
+
+    outline:none;
+
+    background:#fff;
+
+}
+
+.upi-box button{
+
+    width:60px;
+
+    border:none;
+
+    background:#f58220;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+
+
+/* Buttons */
+
+.pay-btn,
+
+.whatsapp-btn,
+
+.home-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    width:100%;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    margin-top:18px;
+
+}
+
+.pay-btn{
+
+    background:#0d2b52;
+
+    color:#fff;
+
+}
+
+.pay-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#143b6d;
+
+}
+
+.whatsapp-btn{
+
+    background:#25D366;
+
+    color:#fff;
+
+}
+
+.whatsapp-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.home-btn{
+
+    background:#f58220;
+
+    color:#fff;
+
+}
+
+.home-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* Steps */
+
+.steps{
+
+    margin-top:35px;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.steps h2{
+
+    text-align:center;
+
+    color:#0d2b52;
+
+    margin-bottom:20px;
+
+}
+
+.step{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #ececec;
+
+    color:#444;
+
+    font-size:16px;
+
+}
+
+.step:last-child{
+
+    border-bottom:none;
+
+}
+
+.step i{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:#f58220;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+/* Help */
+
+.help{
+
+    margin-top:30px;
+
+    background:#fff;
+
+    padding:28px;
+
+    border-radius:22px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.help h3{
+
+    color:#0d2b52;
+
+    margin-bottom:18px;
+
+}
+
+.help p{
+
+    margin:10px 0;
+
+    color:#555;
+
+}
+
+.help i{
+
+    color:#f58220;
+
+    margin-right:8px;
+
+}
+
+
+
+/* Footer */
+
+.footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#0d2b52;
+
+    font-weight:600;
+
+}
+
+.footer i{
+
+    color:#25D366;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+h1{
+
+font-size:28px;
+
+}
+
+.payment-card{
+
+padding:25px;
+
+}
+
+.steps{
+
+padding:22px;
+
+}
+
+.help{
+
+padding:22px;
+
+}
+
+.qr-image{
+
+width:220px;
+
+}
+
+}
