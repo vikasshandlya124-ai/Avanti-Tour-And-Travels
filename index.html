@@ -726,21 +726,25 @@ Noida, Uttar Pradesh
 
 <div class="contact-form">
 
-<form>
+<form action="https://formsubmit.co/vs21180@gmail.com" method="POST">
 
-<input type="text" placeholder="Full Name">
+    <!-- Hidden Fields -->
+    <input type="hidden" name="_subject" value="New Booking Request - Avanti Tour and Travels">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://vikasshandlya124-ai.github.io/Avanti-Tour-And-Travels/thankyou.html">
 
-<input type="email" placeholder="Email Address">
+    <input type="text" name="Full Name" placeholder="Full Name" required>
 
-<input type="tel" placeholder="Mobile Number">
+    <input type="email" name="Email Address" placeholder="Email Address" required>
 
-<textarea placeholder="Write Your Message"></textarea>
+    <input type="tel" name="Mobile Number" placeholder="Mobile Number" required>
 
-<button>
+    <textarea name="Message" placeholder="Write Your Message" required></textarea>
 
-Send Message
-
-</button>
+    <button type="submit">
+        Send Message
+    </button>
 
 </form>
 
