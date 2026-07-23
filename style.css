@@ -1560,3 +1560,61 @@ body{
     color:#777;
     font-size:15px;
 }
+/* ==========================================
+   Founder Responsive
+========================================== */
+
+@media (max-width:768px){
+
+    .founder{
+        padding:60px 15px;
+    }
+
+    .founder-box{
+        flex-direction:column;
+        padding:30px 20px;
+        gap:30px;
+        border-radius:20px;
+    }
+
+    .founder-image{
+        min-width:100%;
+    }
+
+    .founder-image img{
+        width:220px;
+        height:220px;
+        border-width:6px;
+    }
+
+    .founder-content{
+        min-width:100%;
+        text-align:center;
+    }
+
+    .founder-content h2{
+        font-size:18px;
+    }
+
+    .founder-content h3{
+        font-size:36px;
+    }
+
+    .founder-content h3::after{
+        margin:15px auto 0;
+    }
+
+    .founder-content p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .founder-features{
+        grid-template-columns:1fr;
+    }
+
+    .feature-item{
+        padding:15px;
+    }
+
+}
