@@ -1070,7 +1070,17 @@ nav ul{
     height:55px;
     font-size:22px;
 }
+/* Founder Section */
 
+.founder-box{
+    flex-direction:column;
+    text-align:center;
+}
+
+.founder-image img{
+    width:250px;
+    height:250px;
+}
 }
 
 
@@ -1308,4 +1318,47 @@ body{
 
 .modal ul{
     line-height:2;
+}
+.founder{
+    padding:80px 0;
+    background:#fff;
+}
+
+.founder-box{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.founder-image{
+    flex:1;
+    text-align:center;
+}
+
+.founder-image img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.founder-content{
+    flex:2;
+}
+
+.founder-content h2{
+    color:#ff7a00;
+    margin-bottom:10px;
+}
+
+.founder-content h3{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.founder-content p{
+    line-height:1.8;
+    color:#555;
 }
