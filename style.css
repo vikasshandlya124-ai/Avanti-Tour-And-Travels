@@ -1564,42 +1564,6 @@ right:100px;
 
 }
 
-/* Plane */
-
-.plane{
-
-position:absolute;
-
-left:50%;
-
-top:90px;
-
-font-size:26px;
-
-color:#ff7a00;
-
-opacity:.25;
-
-animation:plane 14s linear infinite;
-
-}
-
-@keyframes plane{
-
-0%{
-
-transform:translateX(-420px) translateY(30px);
-
-}
-
-100%{
-
-transform:translateX(420px) translateY(-40px);
-
-}
-
-}
-
 .founder .container{
     position:relative;
     z-index:2;
