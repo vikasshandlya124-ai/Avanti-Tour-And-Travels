@@ -1415,6 +1415,190 @@ body{
     right:-220px;
     filter:blur(60px);
 }
+/* =============================
+   Travel Background
+============================= */
+
+.founder-bg{
+
+position:absolute;
+inset:0;
+pointer-events:none;
+z-index:1;
+
+}
+
+/* Left Road */
+
+.founder-bg .road-left{
+
+position:absolute;
+
+left:-170px;
+top:-120px;
+
+width:430px;
+height:900px;
+
+border:14px solid rgba(13,43,82,.08);
+
+border-radius:250px;
+
+transform:rotate(-18deg);
+
+}
+
+/* Right Road */
+
+.founder-bg .road-right{
+
+position:absolute;
+
+right:-170px;
+top:-40px;
+
+width:430px;
+height:900px;
+
+border:14px solid rgba(13,43,82,.08);
+
+border-radius:250px;
+
+transform:rotate(18deg);
+
+}
+
+/* White Divider */
+
+.road-left::after,
+.road-right::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+width:6px;
+
+height:100%;
+
+transform:translateX(-50%);
+
+background:
+repeating-linear-gradient(
+
+to bottom,
+
+rgba(255,255,255,.9) 0 22px,
+
+transparent 22px 45px
+
+);
+
+}
+
+/* Location Pins */
+
+.pin{
+
+position:absolute;
+
+width:26px;
+height:26px;
+
+background:#ff7a00;
+
+border-radius:50%;
+
+box-shadow:0 0 25px rgba(255,122,0,.35);
+
+}
+
+.pin::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:-8px;
+
+width:10px;
+height:10px;
+
+background:#ff7a00;
+
+transform:translateX(-50%) rotate(45deg);
+
+}
+
+.pin1{
+
+top:180px;
+left:100px;
+
+}
+
+.pin2{
+
+bottom:180px;
+left:260px;
+
+}
+
+.pin3{
+
+top:170px;
+right:220px;
+
+}
+
+.pin4{
+
+bottom:130px;
+right:100px;
+
+}
+
+/* Plane */
+
+.plane{
+
+position:absolute;
+
+left:50%;
+
+top:90px;
+
+font-size:26px;
+
+color:#ff7a00;
+
+opacity:.25;
+
+animation:plane 14s linear infinite;
+
+}
+
+@keyframes plane{
+
+0%{
+
+transform:translateX(-420px) translateY(30px);
+
+}
+
+100%{
+
+transform:translateX(420px) translateY(-40px);
+
+}
+
+}
 
 .founder .container{
     position:relative;
