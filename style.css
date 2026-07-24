@@ -1792,7 +1792,7 @@ right:100px;
     transition:.3s;
 }
 
-.back-home:hover{
+.back-home-btn:hover{
     transform:translateY(-3px);
     background:#e66f00;
 }
@@ -1800,7 +1800,7 @@ right:100px;
 
 @media(max-width:600px){
 
-.back-home{
+.back-home-btn{
     top:20px;
     left:20px;
 
