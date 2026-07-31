@@ -84,7 +84,7 @@ btn.style.transform="scale(1)";
 // Welcome Message
 // ===============================
 
-console.log("Welcome To Avanti Tour & Travels");
+console.log("Welcome To BUSKR Travels");
 
 function openModal(type){
 

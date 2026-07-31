@@ -1,5 +1,5 @@
 @echo off
-title Avanti Tour and Travels Auto Update
+title BUSKR Travels Auto Update
 
 echo =====================================
 echo     Uploading Website to GitHub...

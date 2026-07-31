@@ -1,5 +1,5 @@
 // ================================
-// AVANTI TOUR & TRAVELS
+// BUSKR TRAVELS
 // PAYMENT PAGE JAVASCRIPT
 // ================================
 
