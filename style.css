@@ -149,29 +149,38 @@ height:90px;
 }
 
 .logo h1{
-
-font-size:34px;
-
-font-weight:800;
-
-color:var(--secondary);
-
+    font-size:48px;
+    font-weight:800;
+    color:#0b2345;
+    margin:0;
+    line-height:1;
 }
 
-.logo span{
-
-color:var(--primary);
-
+.logo h1 span{
+    color:#ff7a00;
 }
 
-.logo p{
+.logo-tagline{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-top:6px;
+}
 
-font-size:13px;
+.logo-tagline p{
+    margin:0;
+    font-size:15px;
+    letter-spacing:5px;
+    color:#777;
+    text-transform:uppercase;
+}
 
-letter-spacing:3px;
-
-color:#666;
-
+.logo-tagline .line{
+    width:55px;
+    height:3px;
+    background:#ff7a00;
+    border-radius:10px;
 }
 
 nav ul{
