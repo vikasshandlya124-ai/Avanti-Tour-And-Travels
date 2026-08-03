@@ -163,3 +163,16 @@ document.getElementById("specModal").style.display="block";
 function closeModal(){
 document.getElementById("specModal").style.display="none";
 }
+const swapBtn = document.getElementById("swapBtn");
+const from = document.getElementById("from");
+const destination = document.getElementById("destination");
+
+if (swapBtn && from && destination) {
+  swapBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const temp = from.value;
+    from.value = destination.value;
+    destination.value = temp;
+});
+}
