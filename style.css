@@ -382,8 +382,9 @@ background:#eee;
 
 .booking form{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:1fr 70px 1fr 1fr 1fr 1fr;
     gap:20px;
+    align-items:end;
 }
 
 .input-box{
@@ -427,6 +428,29 @@ background:#eee;
 
 background:#dc6a08;
 
+}
+
+.swap-box{
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    margin-top:28px;
+}
+
+#swapBtn{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#ff7a00;
+    color:#fff;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+#swapBtn:hover{
+    transform:rotate(180deg);
 }
 
 /* ==========================
