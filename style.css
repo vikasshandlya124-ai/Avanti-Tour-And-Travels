@@ -1864,6 +1864,8 @@ right:100px;
 
 }
 
+} /* end @media (max-width:768px) Founder Responsive */
+
 /* ===============================
    BUSKR WELCOME POPUP
 ================================ */
@@ -2547,45 +2549,23 @@ MOBILE RESPONSIVE
             0
             5px;
     }
-
-
     .buskr-popup-description {
-
         font-size: 14px;
     }
-
-
     .buskr-popup-buttons {
-
         flex-direction: column;
-
         gap: 15px;
     }
-
-
     .buskr-popup-primary {
-
         width: 100%;
-
         text-align: center;
     }
-
-
     .buskr-popup-image {
-
         min-height: 240px;
     }
-
-
     .buskr-popup-quote {
-
         left: 25px;
-
-        bottom: 30px;
-
+       bottom: 30px;
         font-size: 16px;
     }
-
-}
-
 }
