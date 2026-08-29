@@ -1030,5 +1030,165 @@ All Rights Reserved.
 </div>
 
 <script src="script.js"></script>
+<!-- =========================
+     BUSKR CHAT WIDGET
+========================= -->
+
+<div class="buskr-chat-launcher" id="buskrChatLauncher">
+    <div class="buskr-chat-text">
+        <span>Have a question?</span>
+        <strong>Chat with <b>BUSKR</b></strong>
+        <small>We're here to help!</small>
+    </div>
+
+    <div class="buskr-chat-icon">
+        💬
+    </div>
+</div>
+
+
+<!-- Chat Window -->
+<div class="buskr-chat-box" id="buskrChatBox">
+
+    <div class="buskr-chat-header">
+        <div>
+            <strong>BUSKR AI Assistant</strong>
+            <small>🟢 Online • Your Travel Companion</small>
+        </div>
+
+        <button id="closeBuskrChat">×</button>
+    </div>
+
+    <div class="buskr-chat-body">
+
+        <div class="buskr-bot-message">
+            👋 Hi! Welcome to <strong>BUSKR Travels</strong><br><br>
+            How can I help you plan your journey today?
+        </div>
+
+        <button class="buskr-option">🚐 Book a Tempo Traveller</button>
+        <button class="buskr-option">💰 Get a Quote</button>
+        <button class="buskr-option">🏢 Corporate Travel</button>
+        <button class="buskr-option">🏔️ Tour Packages</button>
+        <button class="buskr-option">📞 Talk to Travel Expert</button>
+
+    </div>
+
+    <div class="buskr-chat-input">
+        <input type="text" placeholder="Type your message...">
+        <button>➤</button>
+    </div>
+
+</div>
+<script>
+const chatLauncher = document.getElementById("buskrChatLauncher");
+const chatBox = document.getElementById("buskrChatBox");
+const closeChat = document.getElementById("closeBuskrChat");
+const chatBody = document.querySelector(".buskr-chat-body");
+const chatInput = document.querySelector(".buskr-chat-input input");
+const sendBtn = document.querySelector(".buskr-chat-input button");
+const optionButtons = document.querySelectorAll(".buskr-option");
+
+chatLauncher.addEventListener("click", function () {
+    chatBox.style.display = "flex";
+    chatLauncher.style.display = "none";
+});
+
+closeChat.addEventListener("click", function () {
+    chatBox.style.display = "none";
+    chatLauncher.style.display = "flex";
+});
+
+function addUserMessage(message) {
+    const msg = document.createElement("div");
+    msg.style.background = "#ff7a00";
+    msg.style.color = "#fff";
+    msg.style.padding = "10px 12px";
+    msg.style.borderRadius = "12px";
+    msg.style.margin = "10px 0 10px auto";
+    msg.style.maxWidth = "80%";
+    msg.style.width = "fit-content";
+    msg.innerText = message;
+
+    chatBody.appendChild(msg);
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function addBotMessage(message) {
+    const msg = document.createElement("div");
+    msg.className = "buskr-bot-message";
+    msg.innerHTML = message;
+
+    chatBody.appendChild(msg);
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+optionButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        const selectedOption = button.innerText;
+        addUserMessage(selectedOption);
+
+        if (selectedOption.includes("Book a Tempo Traveller")) {
+            addBotMessage(
+                "Sure! 🚐<br><br>Please tell me:<br>" +
+                "1. Pickup location<br>" +
+                "2. Destination<br>" +
+                "3. Travel date<br>" +
+                "4. Number of passengers"
+            );
+        }
+
+        else if (selectedOption.includes("Get a Quote")) {
+            addBotMessage(
+                "Sure! 💰 To calculate your quote, please share your pickup location, destination, travel date and number of passengers."
+            );
+        }
+
+        else if (selectedOption.includes("Corporate Travel")) {
+            addBotMessage(
+                "We provide corporate employee transport, monthly contracts, shuttle services and customized business travel solutions. 🏢"
+            );
+        }
+
+        else if (selectedOption.includes("Tour Packages")) {
+            addBotMessage(
+                "We offer customized group tours, weekend trips, hill-station tours and outstation packages. 🏔️<br><br>Which destination are you planning?"
+            );
+        }
+
+        else if (selectedOption.includes("Talk to Travel Expert")) {
+            addBotMessage(
+                'You can speak directly with our travel team.<br><br>' +
+                '<a href="tel:+918368512828" style="color:#ff7a00;font-weight:bold;text-decoration:none;">📞 Call BUSKR Travels</a>'
+            );
+        }
+    });
+});
+
+function sendMessage() {
+    const message = chatInput.value.trim();
+
+    if (message === "") return;
+
+    addUserMessage(message);
+    chatInput.value = "";
+
+    setTimeout(function() {
+        addBotMessage(
+            "Thanks for your message 😊<br><br>" +
+            "I have received your query. Soon we can connect this chat with AI so BUSKR Assistant can answer these questions automatically."
+        );
+    }, 500);
+}
+
+sendBtn.addEventListener("click", sendMessage);
+
+chatInput.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+});
+</script>
+
 </body>
 </html>

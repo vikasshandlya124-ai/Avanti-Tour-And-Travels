@@ -2633,3 +2633,285 @@ MOBILE RESPONSIVE
         left: 14px !important;
     }
 }
+
+/* ========================================
+   BUSKR CHAT WIDGET
+======================================== */
+
+.buskr-chat-launcher {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 285px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 13px 14px 13px 18px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.22);
+
+    z-index: 9999;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.buskr-chat-launcher:hover {
+    transform: translateY(-4px);
+}
+
+
+/* TEXT */
+
+.buskr-chat-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.buskr-chat-text span {
+    font-size: 12px;
+    color: #777;
+}
+
+.buskr-chat-text strong {
+    font-size: 18px;
+    color: #0c2748;
+}
+
+.buskr-chat-text strong b {
+    color: #ff7a00;
+}
+
+.buskr-chat-text small {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* CHAT ICON */
+
+.buskr-chat-icon {
+
+    width: 52px;
+    height: 52px;
+
+    background: #ff7a00;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   CHAT WINDOW
+========================= */
+
+.buskr-chat-box {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 350px;
+    height: 500px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.30);
+
+    overflow: hidden;
+
+    z-index: 10000;
+
+    display: none;
+
+    flex-direction: column;
+}
+
+
+/* HEADER */
+
+.buskr-chat-header {
+
+    background: #0c2748;
+    color: white;
+
+    padding: 17px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buskr-chat-header div {
+    display: flex;
+    flex-direction: column;
+}
+
+.buskr-chat-header strong {
+    font-size: 16px;
+}
+
+.buskr-chat-header small {
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.buskr-chat-header button {
+
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* CHAT BODY */
+
+.buskr-chat-body {
+
+    flex: 1;
+
+    padding: 15px;
+
+    background: #f6f7f9;
+
+    overflow-y: auto;
+}
+
+
+/* BOT MESSAGE */
+
+.buskr-bot-message {
+
+    background: white;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+
+/* OPTIONS */
+
+.buskr-option {
+
+    width: 100%;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    border-radius: 10px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.buskr-option:hover {
+
+    border-color: #ff7a00;
+
+    color: #ff7a00;
+}
+
+
+/* INPUT */
+
+.buskr-chat-input {
+
+    padding: 12px;
+
+    border-top: 1px solid #ddd;
+
+    display: flex;
+
+    background: white;
+}
+
+.buskr-chat-input input {
+
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    padding: 10px;
+
+    font-size: 14px;
+}
+
+.buskr-chat-input button {
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    background: #ff7a00;
+
+    color: white;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .buskr-chat-launcher {
+
+        width: 230px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .buskr-chat-box {
+
+        width: calc(100% - 30px);
+
+        height: 70vh;
+
+        right: 15px;
+        bottom: 15px;
+    }
+}
