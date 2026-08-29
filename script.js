@@ -3,12 +3,25 @@
 // ===============================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e){
-        e.preventDefault();
+    anchor.addEventListener("click", function(e) {
 
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior:"smooth"
-        });
+        const targetId = this.getAttribute("href");
+
+        // Ignore empty hash links
+        if (!targetId || targetId === "#") {
+            return;
+        }
+
+        const target = document.querySelector(targetId);
+
+        // Only scroll if target actually exists
+        if (target) {
+            e.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
     });
 });
 

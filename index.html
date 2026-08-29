@@ -1075,9 +1075,19 @@ All Rights Reserved.
     </div>
 
     <div class="buskr-chat-input">
-        <input type="text" placeholder="Type your message...">
-        <button>➤</button>
-    </div>
+    <input
+        type="text"
+        id="buskrChatInput"
+        placeholder="Type your message..."
+    >
+
+    <button
+        type="button"
+        id="buskrSendBtn"
+    >
+        ➤
+    </button>
+</div>
 
 </div>
 <script>
@@ -1085,8 +1095,8 @@ const chatLauncher = document.getElementById("buskrChatLauncher");
 const chatBox = document.getElementById("buskrChatBox");
 const closeChat = document.getElementById("closeBuskrChat");
 const chatBody = document.querySelector(".buskr-chat-body");
-const chatInput = document.querySelector(".buskr-chat-input input");
-const sendBtn = document.querySelector(".buskr-chat-input button");
+const chatInput = document.getElementById("buskrChatInput");
+const sendBtn = document.getElementById("buskrSendBtn");
 const optionButtons = document.querySelectorAll(".buskr-option");
 
 chatLauncher.addEventListener("click", function () {
@@ -1165,7 +1175,8 @@ optionButtons.forEach(function(button) {
     });
 });
 
-function sendMessage() {
+const chatHistory = [];
+async function sendMessage() {
     const message = chatInput.value.trim();
 
     if (message === "") return;
@@ -1173,18 +1184,84 @@ function sendMessage() {
     addUserMessage(message);
     chatInput.value = "";
 
-    setTimeout(function() {
-        addBotMessage(
-            "Thanks for your message 😊<br><br>" +
-            "I have received your query. Soon we can connect this chat with AI so BUSKR Assistant can answer these questions automatically."
+    // Current user message history me save karo
+    chatHistory.push({
+        role: "user",
+        content: message
+    });
+
+    addBotMessage("Thinking...");
+
+    try {
+        const response = await fetch(
+            "https://buskr-travels-ai.vikasshandlya124.workers.dev/",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    message: message,
+                    history: chatHistory
+                })
+            }
         );
-    }, 500);
+
+        const data = await response.json();
+
+        const lastBotMessage = chatBody.lastElementChild;
+
+        if (
+            lastBotMessage &&
+            lastBotMessage.innerText === "Thinking..."
+        ) {
+            lastBotMessage.remove();
+        }
+
+        if (data.reply) {
+            addBotMessage(data.reply);
+
+            // AI reply bhi history me save karo
+            chatHistory.push({
+                role: "assistant",
+                content: data.reply
+            });
+
+        } else {
+            addBotMessage(
+                "Sorry, I couldn't process that right now."
+            );
+        }
+
+    } catch (error) {
+
+        console.error("BUSKR CHAT ERROR:", error);
+
+        const lastBotMessage = chatBody.lastElementChild;
+
+        if (
+            lastBotMessage &&
+            lastBotMessage.innerText === "Thinking..."
+        ) {
+            lastBotMessage.remove();
+        }
+
+        addBotMessage(
+            "Sorry, BUSKR AI is temporarily unavailable."
+        );
+    }
 }
 
-sendBtn.addEventListener("click", sendMessage);
 
-chatInput.addEventListener("keypress", function(event) {
+// 👇 EXACTLY YAHA ADD KARNA HAI
+
+sendBtn.addEventListener("click", function () {
+    sendMessage();
+});
+
+chatInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
+        event.preventDefault();
         sendMessage();
     }
 });
