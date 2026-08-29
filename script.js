@@ -176,3 +176,64 @@ if (swapBtn && from && destination) {
     destination.value = temp;
 });
 }
+document.addEventListener("DOMContentLoaded", function () {
+
+    const popup = document.getElementById("buskrWelcomeOverlay");
+    const closeButton = document.getElementById("buskrPopupClose");
+
+    const alreadyShown =
+        sessionStorage.getItem("buskrWelcomeShown");
+
+    if (!alreadyShown) {
+
+        setTimeout(function () {
+
+            popup.classList.add("active");
+            document.body.style.overflow = "hidden";
+
+        }, 1000);
+
+    }
+
+    function closeBuskrPopup() {
+
+        popup.classList.remove("active");
+        document.body.style.overflow = "";
+
+        sessionStorage.setItem(
+            "buskrWelcomeShown",
+            "true"
+        );
+    }
+
+    closeButton.addEventListener(
+        "click",
+        closeBuskrPopup
+    );
+
+    popup.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === popup) {
+                closeBuskrPopup();
+            }
+
+        }
+    );
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                popup.classList.contains("active")
+            ) {
+                closeBuskrPopup();
+            }
+
+        }
+    );
+
+});

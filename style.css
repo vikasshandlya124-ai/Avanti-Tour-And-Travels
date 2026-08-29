@@ -1864,4 +1864,728 @@ right:100px;
 
 }
 
+/* ===============================
+   BUSKR WELCOME POPUP
+================================ */
+
+.buskr-welcome-overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(2, 14, 34, 0.76);
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    z-index: 99999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
+}
+
+.buskr-welcome-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Popup */
+
+.buskr-welcome-popup {
+
+    position: relative;
+
+    width: min(1080px, 94vw);
+    min-height: 620px;
+
+    display: grid;
+
+    grid-template-columns: 53% 47%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,0.45);
+
+    transform:
+        translateY(35px)
+        scale(0.96);
+
+    transition:
+        transform 0.45s
+        cubic-bezier(.16,.84,.44,1);
+}
+
+.buskr-welcome-overlay.active
+.buskr-welcome-popup {
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* CLOSE BUTTON */
+
+.buskr-popup-close {
+
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: white;
+
+    font-size: 32px;
+
+    line-height: 42px;
+
+    color: #092753;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    box-shadow:
+        0 6px 22px
+        rgba(0,0,0,.16);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.buskr-popup-close:hover {
+
+    transform: rotate(90deg);
+
+    background: #ff7600;
+
+    color: white;
+}
+
+
+/* ===============================
+LEFT SIDE
+================================ */
+
+.buskr-popup-content {
+
+    position: relative;
+
+    padding:
+        52px
+        62px
+        45px;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            rgba(255,116,0,.06),
+            transparent 35%
+        ),
+
+        #ffffff;
+}
+
+
+.buskr-popup-logo {
+
+    max-width: 145px;
+
+    margin-bottom: 22px;
+}
+
+
+.buskr-welcome-small {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-style: italic;
+
+    font-size: 40px;
+
+    color: #ff7600;
+
+    margin-bottom: 0;
+}
+
+
+.buskr-popup-content h2 {
+
+    margin: 0;
+
+    font-size: 66px;
+
+    letter-spacing: 9px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    color: #08285a;
+}
+
+
+.buskr-popup-content h2 span {
+
+    color: #ff7600;
+}
+
+
+.buskr-popup-content h3 {
+
+    color: #08285a;
+
+    margin:
+        8px
+        0
+        17px;
+
+    font-size: 29px;
+
+    letter-spacing: 15px;
+
+    font-weight: 500;
+}
+
+
+.buskr-popup-tagline {
+
+    font-size: 14px;
+
+    letter-spacing: 2.4px;
+
+    color: #08285a;
+
+    font-weight: 700;
+
+    padding:
+        16px
+        0;
+
+    position: relative;
+}
+
+
+.buskr-popup-tagline::before,
+.buskr-popup-tagline::after {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 38px;
+
+    height: 2px;
+
+    background: #ff7600;
+
+    vertical-align: middle;
+
+    margin:
+        0
+        13px;
+}
+
+
+.buskr-popup-description {
+
+    margin:
+        20px
+        0
+        27px;
+
+    color: #182c4c;
+
+    line-height: 1.65;
+
+    font-size: 17px;
+}
+
+
+.buskr-popup-description strong {
+
+    color: #ff7600;
+}
+
+
+/* FEATURES */
+
+.buskr-popup-features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    margin:
+        25px
+        0
+        35px;
+}
+
+
+.buskr-popup-feature {
+
+    padding:
+        2px
+        10px;
+
+    border-right:
+        1px solid #e0e4eb;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    align-items: center;
+
+    color: #08285a;
+
+    font-size: 11px;
+
+    line-height: 1.35;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.buskr-popup-feature:last-child {
+
+    border-right: none;
+}
+
+
+.buskr-feature-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    border:
+        2px solid #08285a;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+
+    color: #08285a;
+}
+
+
+/* CTA */
+
+.buskr-popup-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+.buskr-popup-primary {
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071f47,
+            #103876
+        );
+
+    padding:
+        16px
+        28px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    font-size: 15px;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.buskr-popup-primary span {
+
+    margin-left: 12px;
+
+    font-size: 22px;
+}
+
+
+.buskr-popup-primary:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 28px
+        rgba(8,40,90,.3);
+}
+
+
+.buskr-popup-secondary {
+
+    color: #08285a;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+
+.buskr-popup-secondary:hover {
+
+    color: #ff7600;
+}
+
+
+/* ===============================
+RIGHT SIDE
+================================ */
+
+.buskr-popup-image {
+
+    position: relative;
+
+    min-height: 620px;
+
+    overflow: hidden;
+
+    background: #08285a;
+}
+
+
+.buskr-popup-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 8s ease;
+}
+
+
+.buskr-welcome-overlay.active
+.buskr-popup-image img {
+
+    transform: scale(1.06);
+}
+
+
+.buskr-popup-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 10px;
+    height: 100%;
+
+    background: #ff7600;
+
+    z-index: 3;
+
+    clip-path:
+        polygon(
+            100% 0,
+            100% 100%,
+            0 88%,
+            0 12%
+        );
+}
+
+
+.buskr-popup-image-gradient {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(2,20,54,.95) 0%,
+            rgba(2,20,54,.20) 48%,
+            transparent 72%
+        );
+}
+
+
+.buskr-popup-quote {
+
+    position: absolute;
+
+    bottom: 55px;
+    left: 50px;
+    right: 35px;
+
+    color: white;
+
+    font-size: 19px;
+
+    line-height: 1.55;
+
+    z-index: 5;
+}
+
+
+.buskr-popup-quote span {
+
+    color: #ff7600;
+
+    font-weight: 700;
+}
+
+
+/* ===============================
+MOBILE RESPONSIVE
+================================ */
+
+@media(max-width: 900px) {
+
+    .buskr-welcome-overlay {
+
+        padding: 15px;
+
+        overflow-y: auto;
+    }
+
+
+    .buskr-welcome-popup {
+
+        grid-template-columns: 1fr;
+
+        width: 95%;
+
+        min-height: unset;
+    }
+
+
+    .buskr-popup-content {
+
+        padding:
+            40px
+            25px
+            35px;
+    }
+
+
+    .buskr-popup-image {
+
+        min-height: 280px;
+    }
+
+
+    .buskr-popup-content h2 {
+
+        font-size: 48px;
+
+        letter-spacing: 6px;
+    }
+
+
+    .buskr-welcome-small {
+
+        font-size: 32px;
+    }
+
+
+    .buskr-popup-content h3 {
+
+        font-size: 20px;
+
+        letter-spacing: 10px;
+    }
+
+
+    .buskr-popup-features {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap: 20px;
+    }
+
+
+    .buskr-popup-feature {
+
+        border-right: none;
+    }
+
+}
+
+
+@media(max-width: 520px) {
+
+    .buskr-welcome-overlay {
+
+        padding: 10px;
+
+        align-items: flex-start;
+    }
+
+
+    .buskr-welcome-popup {
+
+        margin-top: 20px;
+
+        border-radius: 16px;
+    }
+
+
+    .buskr-popup-content {
+
+        padding:
+            32px
+            18px;
+    }
+
+
+    .buskr-popup-logo {
+
+        max-width: 110px;
+    }
+
+
+    .buskr-welcome-small {
+
+        font-size: 27px;
+    }
+
+
+    .buskr-popup-content h2 {
+
+        font-size: 38px;
+
+        letter-spacing: 5px;
+    }
+
+
+    .buskr-popup-content h3 {
+
+        font-size: 17px;
+
+        letter-spacing: 8px;
+    }
+
+
+    .buskr-popup-tagline {
+
+        font-size: 11px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .buskr-popup-tagline::before,
+    .buskr-popup-tagline::after {
+
+        width: 18px;
+
+        margin:
+            0
+            5px;
+    }
+
+
+    .buskr-popup-description {
+
+        font-size: 14px;
+    }
+
+
+    .buskr-popup-buttons {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .buskr-popup-primary {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .buskr-popup-image {
+
+        min-height: 240px;
+    }
+
+
+    .buskr-popup-quote {
+
+        left: 25px;
+
+        bottom: 30px;
+
+        font-size: 16px;
+    }
+
+}
+
 }
