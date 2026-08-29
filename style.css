@@ -2640,26 +2640,23 @@ MOBILE RESPONSIVE
 
 .buskr-chat-launcher {
     position: fixed;
-    right: 25px;
-    bottom: 25px;
+    right: 85px;
+    bottom: 20px;
 
-    width: 285px;
+    width: 250px;
     background: #ffffff;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 13px 14px 13px 18px;
-
-    border-radius: 18px;
+    padding: 10px 12px 10px 15px;
+    border-radius: 16px;
 
     box-shadow: 0 8px 30px rgba(0,0,0,0.22);
 
     z-index: 9999;
-
     cursor: pointer;
-
     transition: 0.3s ease;
 }
 
