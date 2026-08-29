@@ -2000,7 +2000,7 @@ LEFT SIDE
     position: relative;
 
     padding:
-        52px
+        76px
         62px
         45px;
 
@@ -2019,10 +2019,16 @@ LEFT SIDE
 
 
 .buskr-popup-logo {
-
-    max-width: 145px;
-
-    margin-bottom: 22px;
+    position: absolute;
+    top: 28px;
+    left: 32px;
+    width: 118px;
+    max-width: 118px;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+    z-index: 4;
+    transform: none !important;
 }
 
 
@@ -2505,8 +2511,10 @@ MOBILE RESPONSIVE
 
 
     .buskr-popup-logo {
-
-        max-width: 110px;
+        top: 18px;
+        left: 18px;
+        width: 86px;
+        max-width: 86px;
     }
 
 
@@ -2567,5 +2575,61 @@ MOBILE RESPONSIVE
         left: 25px;
        bottom: 30px;
         font-size: 16px;
+    }
+}
+
+/* =====================================================
+   BUSKR POPUP FINAL OVERRIDES - logo size + brand colors
+   Keep this block at the VERY END of style.css
+===================================================== */
+#buskrWelcomeOverlay .buskr-popup-content {
+    position: relative !important;
+    padding: 46px 48px 38px !important;
+    overflow: hidden !important;
+}
+
+#buskrWelcomeOverlay .buskr-popup-logo {
+    position: absolute !important;
+    top: 22px !important;
+    left: 24px !important;
+    width: 92px !important;
+    max-width: 92px !important;
+    height: 92px !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+    display: block !important;
+    transform: none !important;
+    z-index: 10 !important;
+}
+
+#buskrWelcomeOverlay .buskr-welcome-small {
+    margin-top: 4px !important;
+}
+
+#buskrWelcomeOverlay .buskr-popup-content h2 {
+    color: #0d2340 !important;
+}
+
+#buskrWelcomeOverlay .buskr-popup-content h2 span {
+    color: #f58220 !important;
+}
+
+@media (max-width: 900px) {
+    #buskrWelcomeOverlay .buskr-popup-logo {
+        width: 76px !important;
+        max-width: 76px !important;
+        height: 76px !important;
+        top: 18px !important;
+        left: 18px !important;
+    }
+}
+
+@media (max-width: 520px) {
+    #buskrWelcomeOverlay .buskr-popup-logo {
+        width: 64px !important;
+        max-width: 64px !important;
+        height: 64px !important;
+        top: 14px !important;
+        left: 14px !important;
     }
 }
