@@ -237,3 +237,42 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 });
+  // =====================================
+// EXPLORE OUR SERVICES BUTTON
+// =====================================
+
+const exploreServicesBtn = document.querySelector(".buskr-popup-primary");
+
+if (exploreServicesBtn) {
+
+    exploreServicesBtn.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        // Close welcome popup
+        const popup = document.getElementById("buskrWelcomeOverlay");
+
+        if (popup) {
+            popup.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
+        // Go to Services section
+        const servicesSection = document.getElementById("services");
+
+        if (servicesSection) {
+
+            setTimeout(function () {
+
+                servicesSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }, 300);
+
+        }
+
+    });
+
+}
