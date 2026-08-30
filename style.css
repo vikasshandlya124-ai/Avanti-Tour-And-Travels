@@ -3052,3 +3052,43 @@ MOBILE RESPONSIVE
 .feature-item h4 {
     color: var(--buskr-blue);
 }
+/* Back To Home Button - Desktop */
+.back-home-btn {
+    position: fixed;
+    top: 22px;
+    left: 25px;
+    z-index: 9999;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 12px 20px;
+    background: #ff6b00;
+    color: #ffffff;
+
+    border: 2px solid #ff6b00;
+    border-radius: 50px;
+
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+
+    box-shadow: 0 8px 22px rgba(255, 107, 0, 0.25);
+    transition: 0.3s ease;
+}
+
+.back-home-btn i {
+    color: #ffffff;
+}
+
+.back-home-btn:hover {
+    background: #e85f00;
+    border-color: #e85f00;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.back-home-btn:hover i {
+    color: #ffffff;
+}
