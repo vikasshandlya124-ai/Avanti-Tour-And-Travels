@@ -2912,3 +2912,143 @@ MOBILE RESPONSIVE
         bottom: 15px;
     }
 }
+.about-company {
+    position: relative;
+    min-height: 100vh;
+    padding: 120px 20px 80px;
+    overflow: hidden;
+}
+
+.about-company-box {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-company-content {
+    width: 100%;
+    padding: 55px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.about-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #168447;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.about-company-content h1 {
+    margin: 0 0 8px;
+    color: #123524;
+    font-size: 44px;
+}
+
+.about-company-content h2 {
+    margin-bottom: 25px;
+    color: #168447;
+    font-size: 22px;
+}
+
+.about-company-content p {
+    margin-bottom: 18px;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 15px 25px;
+    color: #fff;
+    background: #168447;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.about-contact-btn:hover {
+    background: #0f6335;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .about-company {
+        padding: 100px 15px 50px;
+    }
+
+    .about-company-content {
+        padding: 30px 22px;
+    }
+
+    .about-company-content h1 {
+        font-size: 32px;
+    }
+
+    .about-company-content h2 {
+        font-size: 19px;
+    }
+
+    .about-company-content p {
+        font-size: 15px;
+    }
+}
+/* BUSKR Brand Colours */
+:root {
+    --buskr-blue: #09264d;
+    --buskr-orange: #ff6b00;
+}
+
+/* BUS aur R blue, K orange */
+.brand-blue {
+    color: var(--buskr-blue);
+}
+
+.brand-orange {
+    color: var(--buskr-orange);
+}
+
+.brand-name span {
+    font-weight: 800;
+}
+
+/* Main heading */
+.about-company-content h1 {
+    color: var(--buskr-blue);
+}
+
+/* Green elements changed to orange */
+.about-label,
+.about-company-content h2 {
+    color: var(--buskr-orange);
+}
+
+/* Plan Your Journey button */
+.about-contact-btn {
+    background: var(--buskr-orange);
+    color: #ffffff;
+}
+
+.about-contact-btn:hover {
+    background: #db5c00;
+}
+
+/* Feature icons */
+.feature-item > i {
+    background: var(--buskr-orange);
+    color: #ffffff;
+}
+
+/* Feature headings in BUSKR blue */
+.feature-item h4 {
+    color: var(--buskr-blue);
+}
