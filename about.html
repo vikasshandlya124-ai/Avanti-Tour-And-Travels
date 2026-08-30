@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>About Us | BUSKR Travels</title>
 
-    <link rel="stylesheet" href="./style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=7">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
@@ -16,107 +18,291 @@
 
 <body>
 
-    <a href="index.html" class="back-home-btn">
-        <i class="fa-solid fa-arrow-left"></i>
-        Back To Home
-    </a>
+    <!-- Navigation -->
+    <header class="about-header">
 
-    <section class="about-company">
+        <a href="index.html" class="about-logo">
+            <span class="logo-bus">BUS</span><span class="logo-k">K</span><span class="logo-r">R</span>
+            <small>TRAVELS</small>
+        </a>
 
-        <div class="founder-bg">
-            <div class="road-left"></div>
-            <div class="road-right"></div>
+        <nav class="about-nav">
 
-            <div class="pin pin1"></div>
-            <div class="pin pin2"></div>
-            <div class="pin pin3"></div>
-            <div class="pin pin4"></div>
-        </div>
+            <a href="index.html">Home</a>
 
-        <div class="container about-company-box">
+            <a href="index.html#services">Services</a>
 
-            <div class="about-company-content">
+            <a href="index.html#fleet">Fleet</a>
 
-                <span class="about-label">WHO WE ARE</span>
+            <a href="about.html" class="active">About Us</a>
 
-                <h1>
-    About
-    <span class="brand-name">
-        <span class="brand-blue">BUS</span><span class="brand-orange">K</span><span class="brand-blue">R</span>
-    </span>
-    Travels
-</h1>
+            <a href="index.html#contact">Contact</a>
 
-                <h2>Journey Beyond Destinations</h2>
+        </nav>
 
-                <p>
-                    BUSKR Travels is a professional transportation company
-                    committed to providing safe, reliable and comfortable
-                    travel services. We make every journey smooth and memorable
-                    through well-maintained vehicles, experienced drivers and
-                    customer-focused service.
-                </p>
+        <button class="about-menu-btn" id="aboutMenuBtn"
+            aria-label="Open navigation menu">
 
-                <p>
-                    We provide transportation solutions for corporate travel,
-                    employee transportation, family trips, weddings, school
-                    tours, group travel and outstation journeys. Whether it is
-                    a daily commute or a long-distance trip, our focus remains
-                    on safety, punctuality and passenger comfort.
-                </p>
+            <i class="fa-solid fa-bars"></i>
 
-                <p>
-                    Our mission is to become a trusted travel partner for
-                    individuals, families and businesses by delivering premium
-                    service with professionalism, transparency and care.
-                </p>
+        </button>
 
-                <div class="founder-features">
+    </header>
 
-                    <div class="feature-item">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <div>
-                            <h4>Safety First</h4>
-                            <span>Safe and trusted journeys</span>
-                        </div>
-                    </div>
 
-                    <div class="feature-item">
-                        <i class="fa-solid fa-clock"></i>
-                        <div>
-                            <h4>Always On Time</h4>
-                            <span>Reliable and punctual service</span>
-                        </div>
-                    </div>
+    <!-- Mobile Navigation -->
+    <nav class="about-mobile-nav" id="aboutMobileNav">
 
-                    <div class="feature-item">
-                        <i class="fa-solid fa-bus"></i>
-                        <div>
-                            <h4>Quality Fleet</h4>
-                            <span>Clean and comfortable vehicles</span>
-                        </div>
-                    </div>
+        <a href="index.html">Home</a>
 
-                    <div class="feature-item">
-                        <i class="fa-solid fa-headset"></i>
-                        <div>
-                            <h4>Customer Support</h4>
-                            <span>Assistance throughout your journey</span>
-                        </div>
-                    </div>
+        <a href="index.html#services">Services</a>
 
-                </div>
+        <a href="index.html#fleet">Fleet</a>
 
-                <a href="index.html#contact" class="about-contact-btn">
-                    Plan Your Journey
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+        <a href="about.html">About Us</a>
 
-            </div>
+        <a href="index.html#contact">Contact</a>
+
+    </nav>
+
+
+    <!-- Hero Banner -->
+    <section class="about-hero">
+
+        <div class="about-hero-overlay"></div>
+
+        <div class="about-hero-content">
+
+            <h1>ABOUT US</h1>
+
+            <p>
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <strong>About Us</strong>
+            </p>
 
         </div>
 
     </section>
+
+
+    <!-- Main About Section -->
+    <main class="premium-about-section">
+
+        <div class="premium-about-container">
+
+            <div class="premium-about-heading">
+
+                <span>WHO WE ARE</span>
+
+                <h2>
+                    About
+                    <span class="company-brand">
+                        <span class="brand-blue">BUS</span><span class="brand-orange">K</span><span class="brand-blue">R</span>
+                    </span>
+                    Travels
+                </h2>
+
+                <div class="heading-line"></div>
+
+                <p>
+                    At BUSKR Travels, we believe that every journey
+                    should be safe, comfortable and memorable. We provide
+                    reliable transportation solutions for individuals,
+                    families, corporate teams and groups with a strong
+                    commitment to punctuality, passenger comfort and
+                    professional service.
+                </p>
+
+            </div>
+
+
+            <!-- Features -->
+            <div class="about-features-grid">
+
+                <!-- Live Tracking -->
+                <article class="about-feature-card">
+
+                    <div class="about-feature-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <h3>Live Vehicle Tracking</h3>
+
+                        <p>
+                            Stay informed in real time with our live
+                            vehicle tracking facility for better
+                            coordination, convenience and peace of mind.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- Wi-Fi -->
+                <article class="about-feature-card">
+
+                    <div class="about-feature-icon">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+
+                    <div>
+                        <h3>Onboard Wi-Fi</h3>
+
+                        <p>
+                            Stay connected throughout your journey with
+                            onboard Wi-Fi available on supported BUSKR
+                            vehicles and travel services.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- Safety -->
+                <article class="about-feature-card">
+
+                    <div class="about-feature-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+                        <h3>Safety First</h3>
+
+                        <p>
+                            Passenger safety remains our priority through
+                            responsible operations, trained drivers and
+                            properly maintained vehicles.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- Comfort -->
+                <article class="about-feature-card">
+
+                    <div class="about-feature-icon">
+                        <i class="fa-solid fa-chair"></i>
+                    </div>
+
+                    <div>
+                        <h3>Premium Comfort</h3>
+
+                        <p>
+                            Comfortable seating, clean interiors,
+                            air-conditioning and practical amenities
+                            make every journey relaxing and enjoyable.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- Support -->
+                <article class="about-feature-card">
+
+                    <div class="about-feature-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+                        <h3>Customer Support</h3>
+
+                        <p>
+                            Our team is available to assist customers
+                            from the initial enquiry and booking through
+                            to the completion of their journey.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- Corporate -->
+                <article class="about-feature-card">
+
+                    <div class="about-feature-icon">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+
+                    <div>
+                        <h3>Corporate & Group Travel</h3>
+
+                        <p>
+                            Professional travel solutions for corporate
+                            transportation, weddings, family tours,
+                            school trips and outstation journeys.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- Mission -->
+            <section class="about-mission">
+
+                <div class="mission-icon">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+                <div>
+                    <span>OUR PURPOSE</span>
+
+                    <h2>Our Mission</h2>
+
+                    <p>
+                        Our mission is to deliver safe, dependable and
+                        comfortable transportation while building lasting
+                        customer relationships through transparency,
+                        professionalism and exceptional service.
+                    </p>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918368512828"
+        class="about-whatsapp"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with BUSKR Travels on WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+    <!-- Mobile Menu Script -->
+    <script>
+
+        const menuButton =
+            document.getElementById("aboutMenuBtn");
+
+        const mobileNavigation =
+            document.getElementById("aboutMobileNav");
+
+        menuButton.addEventListener("click", function () {
+
+            mobileNavigation.classList.toggle("show");
+
+            const menuIcon =
+                menuButton.querySelector("i");
+
+            menuIcon.classList.toggle("fa-bars");
+            menuIcon.classList.toggle("fa-xmark");
+
+        });
+
+    </script>
 
 </body>
 

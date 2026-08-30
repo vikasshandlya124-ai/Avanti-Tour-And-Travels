@@ -2912,103 +2912,325 @@ MOBILE RESPONSIVE
         bottom: 15px;
     }
 }
-.about-company {
-    position: relative;
-    min-height: 100vh;
-    padding: 120px 20px 80px;
-    overflow: hidden;
-}
+/* =====================================
+   BUSKR PREMIUM ABOUT US PAGE
+===================================== */
 
-.about-company-box {
-    position: relative;
-    z-index: 2;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.about-company-content {
-    width: 100%;
-    padding: 55px;
-    background: rgba(255, 255, 255, 0.96);
-    border-radius: 24px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-}
-
-.about-label {
-    display: inline-block;
-    margin-bottom: 12px;
-    color: #168447;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.about-company-content h1 {
-    margin: 0 0 8px;
-    color: #123524;
-    font-size: 44px;
-}
-
-.about-company-content h2 {
-    margin-bottom: 25px;
-    color: #168447;
-    font-size: 22px;
-}
-
-.about-company-content p {
-    margin-bottom: 18px;
-    color: #555;
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-.about-contact-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 30px;
-    padding: 15px 25px;
-    color: #fff;
-    background: #168447;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.about-contact-btn:hover {
-    background: #0f6335;
-    transform: translateY(-2px);
-}
-
-@media (max-width: 768px) {
-    .about-company {
-        padding: 100px 15px 50px;
-    }
-
-    .about-company-content {
-        padding: 30px 22px;
-    }
-
-    .about-company-content h1 {
-        font-size: 32px;
-    }
-
-    .about-company-content h2 {
-        font-size: 19px;
-    }
-
-    .about-company-content p {
-        font-size: 15px;
-    }
-}
-/* BUSKR Brand Colours */
 :root {
     --buskr-blue: #09264d;
     --buskr-orange: #ff6b00;
+    --buskr-light: #f5f7fa;
+    --buskr-text: #4f5968;
+    --buskr-white: #ffffff;
 }
 
-/* BUS aur R blue, K orange */
+/* Page reset */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--buskr-blue);
+    background: var(--buskr-white);
+}
+
+
+/* Header */
+.about-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 92px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 8%;
+
+    background: #ffffff;
+    box-shadow: 0 3px 18px rgba(9, 38, 77, 0.08);
+}
+
+
+/* Text Logo */
+.about-logo {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    color: var(--buskr-blue);
+    font-size: 39px;
+    font-weight: 900;
+    line-height: 1;
+
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    padding-bottom: 22px;
+}
+
+.logo-bus,
+.logo-r {
+    color: var(--buskr-blue);
+}
+
+.logo-k {
+    color: var(--buskr-orange);
+}
+
+.about-logo small {
+    position: absolute;
+    left: 2px;
+    bottom: 3px;
+
+    width: 100%;
+
+    color: #727272;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 7px;
+}
+
+
+/* Desktop Navigation */
+.about-nav {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.about-nav a {
+    position: relative;
+
+    color: #1c2735;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.about-nav a::after {
+    position: absolute;
+    content: "";
+
+    left: 0;
+    bottom: -9px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--buskr-orange);
+
+    transition: width 0.3s ease;
+}
+
+.about-nav a:hover,
+.about-nav a.active {
+    color: var(--buskr-orange);
+}
+
+.about-nav a:hover::after,
+.about-nav a.active::after {
+    width: 100%;
+}
+
+
+/* Mobile menu button */
+.about-menu-btn {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--buskr-orange);
+    color: #ffffff;
+
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.about-mobile-nav {
+    display: none;
+}
+
+
+/* ==============================
+   ABOUT PAGE HERO BANNER
+============================== */
+
+.about-hero {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: 400px;
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("images/about-banner-final.jpg");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* Dark blue overlay — only hero ke andar */
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+    pointer-events: none;
+
+    background: linear-gradient(
+        90deg,
+        rgba(5, 24, 49, 0.82) 0%,
+        rgba(5, 24, 49, 0.62) 50%,
+        rgba(5, 24, 49, 0.48) 100%
+    );
+}
+
+
+/* Hero heading and breadcrumb */
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    padding: 20px;
+
+    text-align: center;
+    color: #ffffff;
+}
+
+.about-hero-content h1 {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.about-hero-content p {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.about-hero-content a {
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.about-hero-content a:hover {
+    color: var(--buskr-orange);
+}
+
+.about-hero-content span {
+    margin: 0 10px;
+    color: #ffffff;
+}
+
+.about-hero-content strong {
+    color: var(--buskr-orange);
+}
+
+
+/* Mobile hero */
+@media (max-width: 768px) {
+
+    .about-hero {
+        height: 260px;
+        min-height: 260px;
+
+        background-size: cover;
+        background-position: 78% center;
+    }
+
+    .about-hero-content {
+        padding: 15px;
+    }
+
+    .about-hero-content h1 {
+        margin-bottom: 14px;
+
+        font-size: 35px;
+        letter-spacing: 1px;
+    }
+
+    .about-hero-content p {
+        font-size: 14px;
+    }
+
+    .about-hero-overlay {
+        background: rgba(5, 24, 49, 0.62);
+    }
+}
+
+
+/* Main section */
+.premium-about-section {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.premium-about-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+/* Heading */
+.premium-about-heading {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.premium-about-heading > span {
+    color: var(--buskr-orange);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.premium-about-heading h2 {
+    margin: 12px 0 5px;
+
+    color: var(--buskr-blue);
+    font-size: 40px;
+    line-height: 1.2;
+}
+
 .brand-blue {
     color: var(--buskr-blue);
 }
@@ -3017,78 +3239,391 @@ MOBILE RESPONSIVE
     color: var(--buskr-orange);
 }
 
-.brand-name span {
-    font-weight: 800;
+.company-brand span {
+    font-weight: 900;
 }
 
-/* Main heading */
-.about-company-content h1 {
-    color: var(--buskr-blue);
-}
+.heading-line {
+    width: 70px;
+    height: 4px;
 
-/* Green elements changed to orange */
-.about-label,
-.about-company-content h2 {
-    color: var(--buskr-orange);
-}
+    margin: 16px auto 22px;
 
-/* Plan Your Journey button */
-.about-contact-btn {
+    border-radius: 10px;
     background: var(--buskr-orange);
-    color: #ffffff;
 }
 
-.about-contact-btn:hover {
-    background: #db5c00;
+.premium-about-heading p {
+    margin: 0;
+
+    color: var(--buskr-text);
+    font-size: 17px;
+    line-height: 1.8;
 }
 
-/* Feature icons */
-.feature-item > i {
-    background: var(--buskr-orange);
-    color: #ffffff;
+
+/* Feature Grid */
+.about-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
-/* Feature headings in BUSKR blue */
-.feature-item h4 {
-    color: var(--buskr-blue);
-}
-/* Back To Home Button - Desktop */
-.back-home-btn {
-    position: fixed;
-    top: 22px;
-    left: 25px;
-    z-index: 9999;
 
-    display: inline-flex;
+/* Feature Cards */
+.about-feature-card {
+    min-height: 190px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    padding: 28px;
+
+    border: 1px solid #e8ebef;
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow: 0 10px 30px rgba(9, 38, 77, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.about-feature-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(255, 107, 0, 0.35);
+
+    box-shadow: 0 18px 40px rgba(9, 38, 77, 0.13);
+}
+
+
+/* Icons */
+.about-feature-icon {
+    width: 62px;
+    min-width: 62px;
+    height: 62px;
+
+    display: flex;
     align-items: center;
-    gap: 9px;
+    justify-content: center;
 
-    padding: 12px 20px;
-    background: #ff6b00;
-    color: #ffffff;
+    border-radius: 16px;
 
-    border: 2px solid #ff6b00;
-    border-radius: 50px;
+    background: rgba(255, 107, 0, 0.1);
+    color: var(--buskr-orange);
 
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
+    font-size: 29px;
 
-    box-shadow: 0 8px 22px rgba(255, 107, 0, 0.25);
     transition: 0.3s ease;
 }
 
-.back-home-btn i {
+.about-feature-card:hover .about-feature-icon {
+    background: var(--buskr-orange);
     color: #ffffff;
 }
 
-.back-home-btn:hover {
-    background: #e85f00;
-    border-color: #e85f00;
-    color: #ffffff;
-    transform: translateY(-2px);
+.about-feature-card h3 {
+    margin: 4px 0 10px;
+
+    color: var(--buskr-blue);
+    font-size: 19px;
 }
 
-.back-home-btn:hover i {
+.about-feature-card p {
+    margin: 0;
+
+    color: var(--buskr-text);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Mission */
+.about-mission {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin-top: 45px;
+    padding: 38px 45px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #f3f7fc,
+            #fff7f1
+        );
+
+    border-left: 5px solid var(--buskr-orange);
+}
+
+.mission-icon {
+    width: 85px;
+    min-width: 85px;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--buskr-orange);
     color: #ffffff;
+
+    font-size: 37px;
+
+    box-shadow: 0 10px 25px rgba(255, 107, 0, 0.25);
+}
+
+.about-mission span {
+    color: var(--buskr-orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.about-mission h2 {
+    margin: 7px 0 10px;
+
+    color: var(--buskr-blue);
+    font-size: 27px;
+}
+
+.about-mission p {
+    margin: 0;
+
+    color: var(--buskr-text);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* WhatsApp */
+.about-whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 999;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+
+    background: #25d366;
+    color: #ffffff;
+
+    font-size: 29px;
+    text-decoration: none;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s ease;
+}
+
+.about-whatsapp:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: #19b853;
+}
+
+
+/* Tablet */
+@media (max-width: 992px) {
+
+    .about-header {
+        padding: 10px 5%;
+    }
+
+    .about-nav {
+        gap: 22px;
+    }
+
+    .about-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .about-header {
+        height: 76px;
+        padding: 8px 18px;
+    }
+
+    .about-logo {
+        font-size: 30px;
+        padding-bottom: 18px;
+    }
+
+    .about-logo small {
+        font-size: 9px;
+        letter-spacing: 5px;
+    }
+
+    .about-nav {
+        display: none;
+    }
+
+    .about-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-mobile-nav {
+        position: fixed;
+        top: 76px;
+        left: 0;
+        z-index: 999;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        padding: 15px 20px 22px;
+
+        background: #ffffff;
+
+        box-shadow: 0 15px 25px rgba(9, 38, 77, 0.12);
+    }
+
+    .about-mobile-nav.show {
+        display: flex;
+    }
+
+    .about-mobile-nav a {
+        padding: 13px 5px;
+
+        border-bottom: 1px solid #eeeeee;
+
+        color: var(--buskr-blue);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .about-mobile-nav a:hover {
+        color: var(--buskr-orange);
+    }
+
+   
+
+    .about-hero-content h1 {
+        font-size: 35px;
+    }
+
+    .premium-about-section {
+        padding: 55px 15px;
+    }
+
+    .premium-about-heading {
+        margin-bottom: 35px;
+    }
+
+    .premium-about-heading h2 {
+        font-size: 30px;
+    }
+
+    .premium-about-heading p {
+        font-size: 15px;
+    }
+
+    .about-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-feature-card {
+        min-height: auto;
+        padding: 23px 20px;
+    }
+
+    .about-feature-icon {
+        width: 55px;
+        min-width: 55px;
+        height: 55px;
+        font-size: 25px;
+    }
+
+    .about-mission {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 30px 24px;
+    }
+
+    .mission-icon {
+        width: 70px;
+        min-width: 70px;
+        height: 70px;
+
+        font-size: 30px;
+    }
+
+    .about-whatsapp {
+        right: 17px;
+        bottom: 17px;
+
+        width: 52px;
+        height: 52px;
+
+        font-size: 26px;
+    }
+    
+
+}
+/* ABOUT PAGE OVERFLOW FIX */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.about-page,
+.about-main,
+.about-section,
+.about-container,
+.about-hero {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.about-container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.about-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+}
+
+.about-feature-card {
+    width: 100%;
+    min-width: 0;
 }
